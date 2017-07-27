@@ -1,0 +1,59 @@
+/* header ------------------------- */
+
+.main-header,
+.header-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.aloha-logo {
+  flex: 0 1 50%;
+  max-width: 120px;
+  align-self: flex-start;
+
+}
+
+.cart-icon {
+flex: 0 1 50%;
+width: 50px;
+max-width: 120px;
+align-self: flex-end;
+}
+
+.header-nav {
+  flex-direction: row;
+  border-top: 1px solid #d7d7d7;
+  justify-content: space-between;
+  list-style: none;
+  
+
+}
+
+.header-nav a {
+  display: inline-block;
+  color: #e2574c;
+  font-weight: 700;
+  margin: 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+
+}
+
+.header-nav a:hover {
+  color: #b64036;
+}
+
+/* Media Queries -------- */
+
+@media (min-width: 769) {
+  .main-header {
+
+  }
+}
