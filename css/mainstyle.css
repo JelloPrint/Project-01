@@ -26,12 +26,7 @@
 html {
     font-size: 14px;
 }
-@media only screen and (min-width: 600px) {
-    html {
-        font-size: 16px;
-    }
-}
-body {
+body, input  {
     color: #2d2d2d;
     font-family: Raleway Web, sans-serif;
     line-height: 2;
@@ -80,15 +75,11 @@ img {
     padding: 0 2%;
     width: 100%;
 }
-@media only screen and (min-width: 1240px) {
-    .container {
-        max-width: 1240px;
-    }
-}
 .heavy {
     font-style: normal;
     font-weight: 700;
 }
+
 
 
 /* header */
@@ -100,20 +91,9 @@ img {
     padding-bottom: .5rem;
     padding-top: 1rem;
 }
-@media only screen and (min-width: 600px) {
-    .site-header {
-        flex-wrap: nowrap;
-    }
-}
 .aloha-logo {
     align-self: flex-start;
     flex: 0 1 50%;
-}
-@media only screen and (min-width: 600px) {
-    .aloha-logo {
-        flex-basis: 20%;
-        order: 1;
-    }
 }
 .screen-reader {
     border: 0;
@@ -128,73 +108,26 @@ img {
 .aloha-logo img {
     max-width: 120px;
 }
-@media only screen and (min-width: 600px) {
-    .aloha-logo img {
-        max-width: 120px;
-    }
-}
-@media only screen and (min-width: 1240px) {
-    .aloha-logo img {
-        max-width: 160px;
-    }
-}
 .cart-icon img {
     align-self: flex-end;
     cursor: pointer;
     flex: 0 1 50%;
-    text-align: right;
-}
-@media only screen and (min-width: 600px) {
-    .cart-icon img {
-        flex-basis: 20%;
-        order: 3;
-        width: 48px;
-    }
-}
-@media only screen and (min-width: 1240px) {
-    .cart-icon img {
-        width: 62px;
-    }
 }
 .header-nav {
     align-self: center;
     flex: 1 0 auto;
-}
-@media only screen and (min-width: 600px) {
-    .header-nav {
-        flex-basis: 60%;
-        order: 2;
-    }
 }
 .header-nav ul {
     border-top: 1px solid #d7d7d7;
     padding-top: .5rem;
     text-align: center;
 }
-@media only screen and (min-width: 600px) {
-    .header-nav ul {
-        border-top: 0;
-        padding-top: 0;
-    }
-}
 .header-nav li {
     display: inline-block;
     margin: 0 1rem;
     text-transform: uppercase;
 }
-@media only screen and (min-width: 600px) {
-    .header-nav li {
-        font-size: .9rem;
-        margin: 0 .5rem;
-    }
-}
-@media only screen and (min-width: 1240px) {
-    .header-nav li {
-        font-size: 1rem;
-        margin: 1rem;
-    }
-}
- a {
+ .header-nav a {
     color: #e2574c;
     text-decoration: none;
 }
@@ -221,12 +154,6 @@ img {
     transform: translate(-50%,-50%);
     width: 80%;
 }
-@media only screen and (min-width: 1240px) {
-.banner {
-    background-size: cover,250px 615px,contain;
-    height: 550px;
-    position: relative;
-}
 .new-collection {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
@@ -237,24 +164,8 @@ img {
     font-weight: 400;
     text-transform: none;
 }
-@media only screen and (min-width: 600px) {
-.season {
-    font-size: 3rem;
-}
-@media only screen and (min-width: 1240px) {
-.season {
-    font-size: 4rem;
-}
 .about {
     text-align: center;
-}
-@media only screen and (min-width: 1240px) {
-.about-text {
-    width: 720px;
-}
-@media only screen and (min-width: 600px) {
-.about-text {
-    max-width: 720px;
 }
 
 
@@ -274,10 +185,222 @@ img {
     font-weight: 100;
     font-size: 1.15rem;
     text-align: center;
-    
 }
 
 
+/* Products */
+
+.product-categories {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.square {
+    border: 4px solid #fff;
+    flex: 1 0 50%;
+    max-width: 50%;
+    position: relative;
+}
+.wide {
+    border: 4px solid #fff;
+    border-left: 0;
+    border-right: 0;
+    flex: 2 0 100%;
+    max-width: 100%;
+    position: relative;
+}
+.wide.mens {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("../images/mens-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.square.trends {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("../images/trends-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.square.glasses {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("../images/glasses-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.square.trends {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("../images/trends-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.square.glasses {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("/../images/glasses-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.square.sale {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("../images/sale-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.square.bags {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("../images/bags-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.wide.womens {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url("../images/womens-category.jpg") no-repeat 50%;
+    background-size: cover,cover;
+}
+.category-name a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px hsla(0,0%,39%,.8);
+    text-transform: uppercase;
+}
+
+/* Newsletter */
+
+.newsletter {
+    background: linear-gradient(180deg,rgba(0,0,0,.15) 0,rgba(0,0,0,.15)),url("../images/wave-bkgd.jpg") no-repeat bottom;
+    color: #fff;
+    margin-bottom: 8px;
+}
+.newsletter h2 {
+    font-family: Playfair Display Web,serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.newsletter p {
+    font-family: Raleway;
+    font-weight: 100;
+    font-size: 1.15rem;
+    text-align: center;
+}
+.sign-up-form {
+    display: block;
+    margin: 2rem auto 0;
+    position: relative;
+    width: 90%;
+}
+input[type=email], input[type=submit] {
+    border: 0;
+    border-radius: 25px;
+}
+input[type=email] {
+    padding: .5rem 1.75rem;
+    padding-right: 150px;
+    width: 100%;
+}
+input[type=submit] {
+    background-color: #e2574c;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: .25rem 1.5rem;
+    position: absolute;
+    right: .25rem;
+    top: .25rem;
+}
+
+/* Site Footer */
+
+.site-footer {
+    background-color: #242424;
+    color: #fff;
+    font-family: Playfair Display Web,serif;
+    padding: 4rem 0;
+    text-align: center;
+}
+.colophon {
+    line-height: 1.5;
+}
+.copyright {
+    margin-bottom: 1rem;
+}
+.contact {
+    margin-bottom: 1rem;
+}
+.address {
+    color: #969696;
+}
 
 
+/* Respnsiveness 600px */
 
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+    .site-header {
+        flex-wrap: nowrap;
+    }
+    .aloha-logo {
+        flex-basis: 20%;
+        order: 1;
+    }
+    .aloha-logo img {
+        max-width: 120px;
+    }
+    .cart-icon img {
+        flex-basis: 20%;
+        order: 3;
+        width: 48px;
+    }
+    .header-nav ul {
+        border-top: 0;
+        padding-top: 0;
+    }
+    .header-nav li {
+        font-size: .9rem;
+        margin: 0 .5rem;
+    }
+    .season {
+        font-size: 3rem;
+    }
+    .about-text {
+        max-width: 720px;
+    }
+    .square {
+        flex-basis: 25%;
+    }
+    .wide {
+        flex-basis: 50%;
+    }
+    .sign-up-form {
+        width: 67%;
+    }
+    .site-footer .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .site-footer {
+        text-align: left;
+    }
+    
+}
+
+/* Responsiveness 1240px */
+
+@media only screen and (min-width: 1240px) {
+    .container {
+        max-width: 1240px;
+    }
+    .aloha-logo img {
+        max-width: 160px;
+    }
+    .cart-icon img {
+        width: 62px;
+    }
+    .header-nav li {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+    .banner {
+            background-size: cover,250px 615px,contain;
+            height: 550px;
+            position: relative;
+        }
+    .season {
+            font-size: 4rem;
+    }
+    .about-text {
+        width: 720px;
+    }
+    .sign-up-wrapper {
+        width: 720px;
+    }
+}
