@@ -85,7 +85,9 @@ img {
     font-style: normal;
     font-weight: 700;
 }
-
+element.style {
+    height: 461px;
+}
 
 
 /* header */
@@ -202,6 +204,9 @@ img {
     flex-wrap: wrap;
     text-align: center;
 }
+.product-categories img {
+    height: 399px;
+}
 .square {
     border: 4px solid #fff;
     flex: 1 0 50%;
@@ -279,14 +284,18 @@ img {
     font-weight: 100;
     color: #969696;
     font-weight: 700;
+    text-align: center;
 }
 .product-type {
     font-size: .75rem;
     margin-bottom: .75rem;
     text-transform: uppercase;
 }
-
-
+.carousel-cell {
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 100%;
+}
 
 /* Newsletter */
 
@@ -422,6 +431,10 @@ input[type=submit] {
     .wide {
         flex-basis: 50%;
     }
+
+    .carousel-cell {
+        width: 50%;
+    }
     .sign-up-form {
         width: 67%;
     }
@@ -439,6 +452,7 @@ input[type=submit] {
         margin-top: 0;
         padding-right: 4rem;
     }
+    
 }
 
 /* Responsiveness 1240px */
@@ -458,15 +472,18 @@ input[type=submit] {
         margin: 1rem;
     }
     .banner {
-            background-size: cover,250px 615px,contain;
-            height: 550px;
-            position: relative;
+        background-size: cover,250px 615px,contain;
+        height: 550px;
+        position: relative;
         }
     .season {
             font-size: 4rem;
     }
     .about-text {
         width: 720px;
+    }
+    .carousel-cell {
+        width: 25%;
     }
     .sign-up-wrapper {
         width: 720px;

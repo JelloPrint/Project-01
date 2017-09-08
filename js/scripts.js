@@ -1,17 +1,17 @@
-// jQuery 
-$(document).ready(function(){
+/* jQuery */
   
-  // shop carousel style
-  $('.carousel').flickity({
-    prevNextButtons: false,
-    initialIndex: 0,
-    wraparound: false,
-    autoPlay: true,
-    cellAlign: "left",
-    contain: true
-  });
+  /* Most-Loved Carousel Style */
+  $(document).ready(function(){
 
-  // header - smooth scrolling
+    $('.carousel').flickity({
+      prevNextButtons: false,
+      initialIndex: 0,
+      autoPlay: true,
+      contain: true
+    });
+
+  /* Smooth Scrolling */
+
   var offset = $(".header-fixed").height();
   $(window).resize(function() {
     offset = $(".header-fixed").height();
@@ -21,7 +21,8 @@ $(document).ready(function(){
     $("html,body,article").animate({scrollTop:$(this.hash).offset().top-offset}, 500);
   });
   
-  // updates - email validation
+  /* Email Validation */
+
   $("#btn-sub").click(function() {
     var emailInput = $("#email-input").val();
     if (ValidateEmail(emailInput)) {
@@ -33,18 +34,8 @@ $(document).ready(function(){
       e.preventDefault();
     } 
   });
-
-  // shop - update number in cart
-  var totalItem = 1
-  $(".btn-addtocart").on("click", function(){
-    $(".cart-total-item").text(totalItem);
-    $(".cart-total-item").css({"display":"inline-block"});
-    return totalItem ++;
-  });
-
 });
 
-// updates - email validation
 function ValidateEmail(email){
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
     return (true);
