@@ -57,6 +57,12 @@ h3 {
 }
 p {
     display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 
 }
 ul {
@@ -296,14 +302,27 @@ input[type=submit] {
     top: .25rem;
 }
 
+
 /* Site Footer */
 
 .site-footer {
     background-color: #242424;
-    color: #fff;
+    color: white;
     font-family: Playfair Display Web,serif;
     padding: 4rem 0;
     text-align: center;
+}
+.colophon a {
+    color: white;
+}
+.social-nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Raleway, serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 100;
+
 }
 .colophon {
     line-height: 1.5;
@@ -316,6 +335,15 @@ input[type=submit] {
 }
 .address {
     color: #969696;
+}
+.social-nav {
+    margin-top: 2rem;
+}
+.network-name {
+    display: none;
+}
+.social-nav i {
+    min-width: 25px;
 }
 
 
@@ -370,6 +398,12 @@ input[type=submit] {
     .site-footer {
         text-align: left;
     }
+    .network-name {
+        display: inline;
+    }
+    .social-nav {
+        margin-top: 0;
+        padding-right: 4rem;
     
 }
 
@@ -403,4 +437,6 @@ input[type=submit] {
     .sign-up-wrapper {
         width: 720px;
     }
+    .social-nav {
+        padding-right: 4rem;
 }
