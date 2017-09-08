@@ -438,7 +438,7 @@ input[type=submit] {
     .social-nav {
         margin-top: 0;
         padding-right: 4rem;
-    
+    }
 }
 
 /* Responsiveness 1240px */
@@ -473,4 +473,5 @@ input[type=submit] {
     }
     .social-nav {
         padding-right: 4rem;
+    }
 }

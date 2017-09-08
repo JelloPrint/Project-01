@@ -1,4 +1,5 @@
 Project 1 for RedAcademy
+
 Author: Matthew Cuthbert
 
 # Goal
