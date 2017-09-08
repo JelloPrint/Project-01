@@ -1,62 +1,205 @@
+/* Accessibility */
+    
 #main[tabindex="-1"]:focus {
-   outline: 0;
+    outline: 0;
+ }
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+.screen-reader-text:focus {
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* above all content */
+}
+
+
+/* Global */
+
+html {
+    font-size: 14px;
+}
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 16px;
+    }
 }
 body {
     color: #2d2d2d;
+    font-family: Raleway Web, sans-serif;
     line-height: 2;
-    font-family: Raleway Web,sans-serif;
-    font-weight: 400;
     font-size: 1rem;
     font-style: normal;
-    font-size: 14px;
- 
+    font-weight: 400;
 }
-.bold {
-      font-style: normal;
-     font-weight: 700;
-}
-
-
-h2 {
-    line-height: 1;
-    margin-bottom: 1.5rem;
-    font-family: Playfair Display Web,serif;
-    font-size: 2.4rem;
-    font-style: italic;
-    text-align: center;
-}
-
-p {
-  display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
-container {
-
-  padding: 0 2%;
-    margin: 0 auto;
-    width: 100%;
-}
-
 * {
     box-sizing: border-box;
     outline: none;
 }
-
 section {
+    padding: 4rem 0;
+    display: block;
+}
+div {
+    display: block;
+}
+h1, h2, h3 {
+    font-family: Playfair Display Web,serif;
+    line-height: 1;
+}
+h3 {
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    font-style: italic;
+    text-align: center;
+}
+p {
+    display: block;
 
-      display: block;
-      padding: 4rem 0;
+}
+ul {
+    display: block;
+    list-style: none;
+}
+li {
+    display: list-item;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 2%;
+    width: 100%;
+}
+@media only screen and (min-width: 1240px) {
+    .container {
+        max-width: 1240px;
+    }
+}
+.heavy {
+    font-style: normal;
+    font-weight: 700;
 }
 
-/* header (1)---> nav.css------------------------- */
 
+/* header */
 
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    padding-top: 1rem;
+}
+@media only screen and (min-width: 600px) {
+    .site-header {
+        flex-wrap: nowrap;
+    }
+}
+.aloha-logo {
+    align-self: flex-start;
+    flex: 0 1 50%;
+}
+@media only screen and (min-width: 600px) {
+    .aloha-logo {
+        flex-basis: 20%;
+        order: 1;
+    }
+}
+.screen-reader {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.aloha-logo img {
+    max-width: 120px;
+}
+@media only screen and (min-width: 600px) {
+    .aloha-logo img {
+        max-width: 120px;
+    }
+}
+@media only screen and (min-width: 1240px) {
+    .aloha-logo img {
+        max-width: 160px;
+    }
+}
+.cart-icon img {
+    align-self: flex-end;
+    cursor: pointer;
+    flex: 0 1 50%;
+    text-align: right;
+}
+@media only screen and (min-width: 600px) {
+    .cart-icon img {
+        flex-basis: 20%;
+        order: 3;
+        width: 48px;
+    }
+}
+@media only screen and (min-width: 1240px) {
+    .cart-icon img {
+        width: 62px;
+    }
+}
+.header-nav {
+    align-self: center;
+    flex: 1 0 auto;
+}
+@media only screen and (min-width: 600px) {
+    .header-nav {
+        flex-basis: 60%;
+        order: 2;
+    }
+}
+.header-nav ul {
+    border-top: 1px solid #d7d7d7;
+    padding-top: .5rem;
+    text-align: center;
+}
+@media only screen and (min-width: 600px) {
+    .header-nav ul {
+        border-top: 0;
+        padding-top: 0;
+    }
+}
+.header-nav li {
+    display: inline-block;
+    margin: 0 1rem;
+    text-transform: uppercase;
+}
+@media only screen and (min-width: 600px) {
+    .header-nav li {
+        font-size: .9rem;
+        margin: 0 .5rem;
+    }
+}
+@media only screen and (min-width: 1240px) {
+    .header-nav li {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+}
+ a {
+    color: #e2574c;
+    text-decoration: none;
+}
 
-/* SECTION (2) New Collection   ----------------  */
+/* Banner */
 
 .banner {
     background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url(../images/banner-girl.png) no-repeat center 60px,url(../images/flower-bkgd.jpg) repeat-x top;
@@ -65,9 +208,8 @@ section {
     position: relative;
 
 }
-
 .banner-text {
-  color: #fff;
+    color: #fff;
     font-weight: 700;
     left: 50%;
     line-height: 1;
@@ -79,299 +221,63 @@ section {
     transform: translate(-50%,-50%);
     width: 80%;
 }
-
-.new-collection {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.season {
-  font-family: Playfair Display Web,serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  text-transform: none;
-}
-/* SECTION (3) Hand-Crafted Styles ----------------  */
-
-.information {
-  text-align: center;
-
-}
-
-
-
-/* SECTION (4) Product Categories  ----------------- */
-
-.categories {
-      padding: 0;
-      display: block;
-      
-}
-.category {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  
-
-}
-
-
-.wide {
-
-    border-left: 0;
-    border-right: 0;
-    -ms-flex: 2 0 100%;
-    flex: 2 0 100%;
-    max-width: 100%;
-    min-height: 200px;
-    border: 4px solid #fff;
-    position: relative;
-    padding: 0;
-    display: block;
-    text-align: center;
-    font-size: 16;
-      
-}
-
-.square {
-
-    -ms-flex: 1 0 50%;
-    flex: 1 0 50%;
-    max-width: 50%;
-    min-height: 196px;
-    border: 4px solid #fff;
-    position: relative;
-    padding: 0;
-    display: block;
-    text-align: center;
-    font-size: 16;
-      
-}
-
-
-.mens {
-
-    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url(../images/mens-category.jpg) no-repeat 50%;
-    background-size: cover,cover;
-    order: 1;
-
-}
-
-.trends {
-
-    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url(../images/trends-category.jpg) no-repeat 50%;
-    background-size: cover,cover;
-    order: 2;
-}
-
-.glasses {
-
-    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url(../images/glasses-category.jpg) no-repeat 50%;
-    background-size: cover,cover;
-    order: 3;
-}
-
-.sale {
-    
-    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url(../images/sale-category.jpg) no-repeat 50%;
-    background-size: cover,cover;
-    order: 4;
-}
-
-.bags {
-
-    background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url(../images/bags-category.jpg) no-repeat 50%;
-    background-size: cover,cover;
-    order: 5;
-}
-
-.womens {
-
-     background: linear-gradient(180deg,rgba(0,0,0,.25) 0,rgba(0,0,0,.25)),url(../images/womens-category.jpg) no-repeat 50%;
-     background-size: cover,cover;
-     order: 6;
-}
-
-.category-name a {
-
-    color: white;
-    text-decoration: none;
-
-
-  
-}
-
-/* SECTION (5) MOST-LOVED  ----------------- */
-
-.most-loved {
-
-  text-align: center;
-
-}
-
-h3 {
-    color: #e2574c;
-    font-family: Playfair Display Web,serif;
-    line-height: 1;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-
-.price {
-
-color: #969696;
-font-weight: 700;
-
-}
-
-.product-type {
-
-    color: #2d2d2d;
-    line-height: 2;
-    font-family: Raleway Web,sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    font-style: normal;
-    font-size: 14px;
-}
-
-/* SECTION (6) Updates  ----------------- */
-
-.signup {
-
-    background: linear-gradient(180deg,rgba(0,0,0,.15) 0,rgba(0,0,0,.15)),url(../images/wave-bkgd.jpg) no-repeat bottom;
-    color: #fff;
-    margin-bottom: 8px;
-    text-align: center;
-}
-
-.signup p {
-    font-size: 1.15rem;
-}
-
-
-
-/* SECTION (7) Footer  ----------------- */
-
-.site-footer {
-
-    background-color: #242424;
-    color: #fff;
-    font-family: Playfair Display Web,serif;
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.colophon {
-    line-height: 1.5;
-}
-
-.contact, .copyright {
-    margin-bottom: 1rem;
-}
-
-.address {
-    color: #969696;
-
-}
-
-.social-nav {
-    display: flex;
-    flex-direction: column;
-    font-family: Raleway Web,sans-serif;
-    margin-top: 2rem;
-    list-style: none;
-    text-align: center;
-
-
-}
-
-.social-nav a {
-
-  color: white;
-  text-decoration: none;
-}
-
-
-.screen-reader-text {
-   clip: rect(1px, 1px, 1px, 1px);
-   position: absolute !important;
-   height: 1px;
-   width: 1px;
-   overflow: hidden;
-}
-
-.screen-reader-text:focus {
-   clip: auto !important;
-   display: block;
-   height: auto;
-   left: 5px;
-   top: 5px;
-   width: auto;
-   z-index: 100000; /* above all content */
-}
-
-
 @media only screen and (min-width: 1240px) {
-.social-nav {
-    padding-right: 4rem;
+.banner {
+    background-size: cover,250px 615px,contain;
+    height: 550px;
+    position: relative;
 }
-
+.new-collection {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
 .season {
-    font-size: 4rem;
+    font-family: Playfair Display Web,serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: none;
 }
-}
-
-
 @media only screen and (min-width: 600px) {
-
-.html {
-    font-size: 16px;
-}
-
 .season {
     font-size: 3rem;
 }
-
-.social-nav {
-  -ms-flex-align: end;
-  
+@media only screen and (min-width: 1240px) {
+.season {
+    font-size: 4rem;
+}
+.about {
+    text-align: center;
+}
+@media only screen and (min-width: 1240px) {
+.about-text {
+    width: 720px;
+}
+@media only screen and (min-width: 600px) {
+.about-text {
+    max-width: 720px;
 }
 
-.category-wide {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+
+/* About */
+
+.about h2 {
+    font-family: Playfair Display Web,serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.about p {
+    font-family: Raleway;
+    font-weight: 100;
+    font-size: 1.15rem;
+    text-align: center;
+    
 }
 
-@media only screen and (min-width: 600px)
-style.min.css:1
-.category-square {
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-}
 
-.cart-icon {
-    -ms-flex-preferred-size: 20%;
-    flex-basis: 20%;
-    -ms-flex-order: 3;
-    order: 3;
-    width: 48px;
-}
 
-.category-square:nth-child(5), .category-wide:first-child {
-    border-left: 0;
-    border-right: 4px solid #fff;
-}
 
-@media screen and (min-width: 400px){
 
-.html {
-
-  font-size: 14px;
-
-}
-
-}
